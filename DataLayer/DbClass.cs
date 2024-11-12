@@ -79,7 +79,7 @@ namespace DataLayer
             return dt;
 
         }
-
+        //method for passing query
         public DataTable execQuery(string query)
         {
 
