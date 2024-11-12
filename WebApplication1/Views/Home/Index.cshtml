@@ -6,12 +6,43 @@
     <section class="row" aria-labelledby="aspnetTitle">
         <h1 id="title">ASP.NET</h1>
         <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-       
+
     </section>
 
     <h2 class="text-primary">@ViewBag.Message</h2>
 
     <p>hello hello kya haal he</p>
+    <h2>Where will they hide tonight, where will they go</h2>
     <img src="~/Images/home2.jpg" />
-   
+
+    @if (ViewBag.DataTable != null)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    @foreach (var column in ViewBag.DataTable.Columns)
+                    {
+                        <th>@column.ColumnName</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in ViewBag.DataTable.Rows)
+                {
+                    <tr>
+                        @foreach (var item in row.ItemArray)
+                        {
+                            <td>@item</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No data available.</p>
+    }
+
+
 </main>
