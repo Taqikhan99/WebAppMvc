@@ -80,11 +80,11 @@ namespace DataLayer
 
         }
         //method for passing query
-        public DataTable execQuery(string query)
+        public DataTable execQuery(string q)
         {
 
             DataTable dt = new DataTable();
-            using (SqlCommand cmd = new SqlCommand(query, con))
+            using (SqlCommand cmd = new SqlCommand(q, con))
             {
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
