@@ -17,27 +17,29 @@
 
     @if (ViewBag.DataTable != null)
     {
-        <table class="table">
-            <thead>
-                <tr>
-                    @foreach (var column in ViewBag.DataTable.Columns)
-                    {
-                        <th>@column.ColumnName</th>
-                    }
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var row in ViewBag.DataTable.Rows)
-                {
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
                     <tr>
-                        @foreach (var item in row.ItemArray)
+                        @foreach (var column in ViewBag.DataTable.Columns)
                         {
-                            <td>@item</td>
+                            <th>@column.ColumnName</th>
                         }
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var row in ViewBag.DataTable.Rows)
+                    {
+                        <tr>
+                            @foreach (var item in row.ItemArray)
+                            {
+                                <td>@item</td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     }
     else
     {
