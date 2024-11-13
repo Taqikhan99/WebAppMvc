@@ -15,7 +15,7 @@ namespace DataLayer
         SqlConnection con;
         public DbClass()
         {
-            constr = ConfigurationManager.ConnectionStrings["dbConn"].ToString();
+            constr = ConfigurationManager.ConnectionStrings["dbConnection"].ToString();
             con = new SqlConnection(constr);
         }
 
