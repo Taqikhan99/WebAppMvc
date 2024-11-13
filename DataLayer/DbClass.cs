@@ -80,11 +80,11 @@ namespace DataLayer
 
         }
         
-        public DataTable execQuery(string qry)
+        public DataTable execQuery(string query)
         {
 
             DataTable dt = new DataTable();
-            using (SqlCommand cmd = new SqlCommand(qry, con))
+            using (SqlCommand cmd = new SqlCommand(query, con))
             {
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
