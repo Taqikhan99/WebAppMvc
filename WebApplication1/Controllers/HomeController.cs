@@ -29,7 +29,7 @@ namespace WebApplication1.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application New Desc page.";
+            ViewBag.Message = "Your application Description page.";
 
             return View();
         }
